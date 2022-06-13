@@ -1,0 +1,474 @@
+body  {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #ffffff;
+	background-image:url('images/zetabg.jpg');
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center top; 
+	color: #ffffff;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+    font-size: 18px;
+    font-style: italic;
+    font-weight:bold;
+    text-align:center;
+}
+
+h2 {
+    font-size: 16px;
+    font-weight:bold;
+}
+
+h4 {
+    font-size: 12px;
+    font-weight:bold;
+    text-align:center;
+}
+
+h4::before { 
+    content: "| ";
+}
+
+h4::after { 
+    content: " |";
+}
+
+a {
+	color: #ffffff;
+	text-decoration:none;
+	border-top-width: thin;
+	border-right-width: thin;
+	border-bottom-width: thin;
+	border-left-width: thin;
+	border-top-color: #000003;
+	border-right-color: #000003;
+	border-bottom-color: #000003;
+	border-left-color: #000003;
+}
+
+a:hover {
+    color:#cc9022;
+}
+
+a:visited {
+    color: #ffffff;
+    text-decoration:none;
+}
+
+a:active {
+	color: #000003;
+	text-decoration:none;
+}
+
+a:hover {
+	color: #000003;
+	text-decoration:none;
+} 
+
+
+br {
+    line-height:5px;
+}
+
+#container { 
+	width: 780px; 
+	margin: 0 auto; 
+} 
+
+#header { 
+	height: 163px;
+	background-image:url('images/header.jpg');
+	background-position: bottom;
+	background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+	text-align:center;
+} 
+
+/*--Hamburger menu--*/
+
+.headerlinks {
+    position: relative;
+    width: 100%;
+    z-index: 3;
+}
+
+.headerlinks ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+.headerlinks li a {
+    color:#000000;
+    display: block;
+    padding: 0 5px;
+    text-decoration: none;
+}
+
+.headerlinks  li a:hover,
+.headerlinks .menu-btn:hover {
+    background-color: #f4f4f4;
+      opacity: 0.5;
+}
+
+/* menu */
+
+.headerlinks .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.headerlinks .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: left;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.headerlinks  .menu-icon .navicon {
+  background: #fff;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.headerlinks  .menu-icon .navicon:before,
+.headerlinks .menu-icon .navicon:after {
+  background: #fff;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.headerlinks  .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.headerlinks  .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.headerlinks  .menu-btn {
+  display: none;
+}
+
+.headerlinks  .menu-btn:checked ~ .menu {
+    max-height: 240px;
+}
+
+.headerlinks  .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.headerlinks  .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.headerlinks  .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.headerlinks  .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.headerlinks  .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/*--Mobile Hamburger menu--*/
+
+@media (min-width: 48em) {
+.headerlinks li {
+    float: left;
+  }
+.headerlinks  li a {
+    padding: 5px 5px;
+  }
+ .headerlinks .menu {
+    clear: none;
+    float: left;
+    max-height: none;
+  }
+.headerlinks  .menu-icon {
+    display: none;
+  }
+}
+/*--End Hamburger menu--*/
+
+.content { 
+    background: #000000;
+    margin-top: 30px;
+	padding: 10px;
+}
+
+.profiles {
+    float: left;
+    margin: 0 10px 10px;
+}
+
+#footer { 
+	background-image:url('images/background_footer.jpg');
+	background-position: right;
+	color: #ffffff;
+	height: 35px;
+	padding: 0;
+} 
+
+#footer ul{
+    padding: 2px 0px 3px 25px;
+}
+
+#footer li {
+    display: inline;
+    list-style-type:none;
+    padding-right: 10px;
+}
+
+#footer li a {
+    color: #ffffff;
+    font-size:10px;
+}
+
+#footer li a:hover {
+    color:#cc9022;
+    font-size:10px;
+}
+
+.mobile {
+    display:none;
+}
+
+#space {
+    height: 20px;
+    clear:both;
+}
+
+/*--Slider Window--*/
+.main_view {
+	float: left;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.window {
+	height:326px;	width: 580px;
+	overflow: hidden; 
+	position: relative;
+}
+
+.image_reel {
+	position: absolute;
+	padding: 0px;
+	margin: 0px; 
+}
+
+.image_reel img {
+    float: left; padding: 0px;
+	margin: 0px; 
+    
+}
+
+#bigwindow {
+    width: 600px;
+}
+
+/*--Paging Styles--*/
+.paging {
+	position: absolute;
+	bottom: 20px; right: -7px;
+	width: 178px; height:47px;
+	z-index: 100; /*--Assures the paging stays on the top layer--*/
+	text-align: center;
+	line-height: 40px;
+	background-image:url('images/background_paging.png');
+	display: none; /*--Hidden by default, will be later shown with jQuery--*/
+}
+
+.paging a {
+	padding: 5px;
+	text-decoration: none;
+	color: #fff;
+}
+
+.paging a:active {
+	font-weight: bold;
+	background: #000003;
+	border-radius: 3px;
+}
+
+.paging a:hover {
+    font-weight: bold;
+    
+}
+
+/*--Main Page Sidebar--*/
+#sidebar {
+	background-image:url('images/background_sidebar.png');
+	background-repeat:repeat;
+    color:#ffffff;
+	float: right; 
+	padding: 10px;
+	height: 100%;
+	width: 150px;
+}
+
+#sidebar h2{
+    font-family:"Courier New", Courier, monospace;
+    font-size: 1.3em;
+    text-align:left;
+    text-decoration:underline;
+}
+
+#sidebar a{
+    font-size:10px;
+}
+
+#sidebar ul {
+    margin:0;
+    padding: 0;
+}
+
+#sidebar li {
+    list-style-type:none;
+}
+
+/*--Webisodes List--*/
+
+.boxes {
+    color:#000000;
+    display: inline-block;
+    font-size: 10pt;
+    font-family: serif,"Times New Roman", Times;
+    margin: 2px 5px 0;
+    padding: 0 10px 5px 0;
+    height: 125px;
+    width: 125px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.boxes img {
+    border: 2px solid #000003;
+    text-align:center;
+}
+
+.boxes h3 {
+    padding: 0px;
+    margin: 0px;
+    text-align:left;
+}
+
+.boxes p{
+    padding: 0px;
+    margin: 0px;
+    text-align:left;
+}
+
+#video {
+    left: 0;
+    right: 0;
+    text-align:center;
+}
+
+#webisodes {
+    float:left;
+}
+
+
+/*--Mobile and Tablet Views--*/
+@media only screen and (max-width:768px){
+    body {
+        margin:0;
+        padding:0;
+    }
+
+    #container {
+        border:0;
+        box-shadow:none;
+        width: auto;
+        margin:0 auto;
+        text-align:center;
+    }
+    
+    #sidebar {
+        display:none;
+    }
+    
+    #bigWindow {
+        padding: 0;
+        margin: 0 auto;
+    }
+    
+    #footer ul{
+    padding: 0;
+}
+
+}
+
+@media only all and (max-width:500px ){
+    #container {
+        margin:0;
+        padding: 0;
+    }
+    
+    #header {
+        height: 291px;
+        background-image:url('images/zetaman-logo01.png');
+    	background-position: center;
+    	background-repeat: no-repeat;
+    	background-size: 330px 227px;
+    }
+    
+    .headerlinks {
+        margin-bottom: 10px;
+    }
+    
+    .headerlinks ul {
+        text-align:left;
+    }
+    
+    .headerlinks li a {
+    font-size: 1.25rem;
+    font-weight: bold;
+    }
+    
+    .window {
+        display:none;
+    }
+     
+    
+    #video {
+        margin: 0;
+    }
+    
+    iframe {
+        display: block;
+        height: auto;
+        width: auto;
+    }
+    
+    #sidebar {
+        display:none;
+    }
+    
+    #footer {
+        display:none;
+    }
+    
+}
+
